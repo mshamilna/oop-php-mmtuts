@@ -1,5 +1,10 @@
 
-<?php include_once "./includes/person.inc.php"; ?>
+<?php 
+
+include_once "./includes/person.inc.php"; 
+include_once "./includes/newClass.inc.php"; 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +14,14 @@
 </head>
 <body>
   <?php
-    $pet01 = new Person();
+    $object = new NewClass(); 
+    echo $object -> getProperty();
+    echo $object -> setProperty('new property just set <br/>');
+    echo $object -> getProperty();
 
-    echo $pet01 -> owner();
+    // 
+    //  to destroy an object
+    unset($object);
   ?>
 </body>
 </html>
