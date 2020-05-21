@@ -11,13 +11,11 @@
 </head>
 <body>
   <?php
-     $person1 = new person();
-     $person1 -> setname('muhammed');
-     echo $person1 -> name;
-  
-     $person2 = new person();
-     $person2 -> setname('Shamil');
-     echo $person2 -> name;
+     $person1 = new person('shamil','black', 26); 
+     echo $person1 -> getName();
+     $person1 -> setName('rahul');
+     echo $person1 -> getName();
+
   ?>
 </body>
 </html>
