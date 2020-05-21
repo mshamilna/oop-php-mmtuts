@@ -1,5 +1,7 @@
 
 <?php include_once "./includes/person.inc.php"; ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +11,13 @@
 </head>
 <body>
   <?php
-    $pet01 = new Person();
-
-    echo $pet01 -> owner();
+     $person1 = new person();
+     $person1 -> setname('muhammed');
+     echo $person1 -> name;
+  
+     $person2 = new person();
+     $person2 -> setname('Shamil');
+     echo $person2 -> name;
   ?>
 </body>
 </html>
