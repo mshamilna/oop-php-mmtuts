@@ -1,8 +1,6 @@
-
-<?php
-
-  include 'includes/autoloader.inc.php';
-
+<?php 
+  declare(strict_types = 1);
+  include 'includes/autoloader.inc.php'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +11,13 @@
 </head>
 <body>
   <?php
-    $pet01 = new Person\Person();
-
-    echo $pet01 -> getName();
+    $person1 = new Person\Person();
+    try {
+      $person1 -> setName(8);
+      echo $person1->getName();
+    } catch (TypeError $e) {
+      echo "🤦‍♀️Error!:".$e->getMessage();
+    }
   ?>
 </body>
 </html>

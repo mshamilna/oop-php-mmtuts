@@ -13,6 +13,10 @@ class Person {
     return $this -> first;
      
   }
+  public function setName(string $name) {
+    $this -> first = $name;
+     
+  }
 }
 
  
