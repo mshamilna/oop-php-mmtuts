@@ -1,5 +1,9 @@
 
-<?php include_once "./includes/person.inc.php"; ?>
+<?php
+
+  include 'includes/autoloader.inc.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +13,9 @@
 </head>
 <body>
   <?php
-    $pet01 = new Person();
+    $pet01 = new Person\Person();
 
-    echo $pet01 -> owner();
+    echo $pet01 -> getName();
   ?>
 </body>
 </html>
