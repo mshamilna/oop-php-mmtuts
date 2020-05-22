@@ -3,9 +3,11 @@
 class Person {
   // properties
 
-  private $name = "Daniel";
-  private $eyecolor = "Daniel";
-  private $age = "Daniel";
+  private $name ;
+  private $eyecolor;
+  private $age;
+
+  public static $drinkingAge = 21;
 
   // public can be accessed from anywhere
   // private cannot access outside class
@@ -22,15 +24,27 @@ class Person {
   public function setName($name) {
     $this -> name = $name ; 
     // it doesnt use $ sign with name brcause its a method not variable
-  }
+  } 
   public function getName() {
     return $this -> name;
+    // it doesnt use $ sign with name brcause its a method not variable
+  }
+
+  public static function getDrinkingAge() {
+    return self::$drinkingAge;
     // it doesnt use $ sign with name brcause its a method not variable
   }
 
   public function __destruct() {
     // both constructor and destructor instantiate at the same moment
     // triggered by $variable = new ClassName();
+  }
+
+
+  // static function
+
+  public static function setDrinkingAge($newDA){
+    self::$drinkingAge = $newDA;
   }
 }
 

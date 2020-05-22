@@ -16,6 +16,13 @@
      $person1 -> setName('rahul');
      echo $person1 -> getName();
 
+
+    echo Person::getDrinkingAge();
+    Person::setDrinkingAge(18);
+    echo Person::getDrinkingAge();
+
+
+
   ?>
 </body>
 </html>
