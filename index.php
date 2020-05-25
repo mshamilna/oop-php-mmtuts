@@ -10,6 +10,13 @@
   <title>oop_php</title>
 </head>
 <body>
-  
+  <?php
+
+    $userObj = new UsersCtrl();
+    // $userObj->creatUser('PDO', 'Vimal Madhav', 'inserting from oop php pdo4');
+    $userObj2 = new UsersView();
+    $userObj2->showUsers('PDO');
+
+  ?>
 </body>
 </html>
